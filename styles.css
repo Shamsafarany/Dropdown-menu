@@ -1,77 +1,80 @@
-body{
-    margin:0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-header{
-    height: 5%;
-    background-color: rgb(146, 110, 180);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 2px 5px black;
-    max-width: 1200px;
-    min-width: 850px;
-    margin: auto
-}
-
-.nav-list{
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    font-size: 20px;
-    color: white;
+header {
+  height: 5%;
+  background-color: rgb(146, 110, 180);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 5px black;
+  max-width: 1300px;
+  min-width: 850px;
+  margin: auto;
 }
 
-.menu{
-    border-bottom: solid white;
-    padding: 10px;
-    padding-bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  color: white;
 }
 
-img{
-    height: 15px;
-    width: 15px;
-}
-.list-container{
-    position: relative;
-}
-
-
-
-.dropdown{
-    border: solid black;
-    position: absolute;
-    background-color: rgb(146, 110, 180);
-    padding: 10px;
-    width: 120%;
-    top: 100%;
-    left: -20%;
-    margin-top: 20px;
-
+.menu {
+  border-bottom: solid white;
+  padding: 10px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.dropdown ul{
-    list-style: none;
-    padding: 10px;
-    margin: 0;
+img {
+  height: 15px;
+  width: 15px;
 }
-.dropdown ul li{
-    padding: 10px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border-bottom: solid rgb(89, 76, 95);
+.list-container {
+  position: relative;
 }
 
-.dropdown ul li:hover{
-    text-decoration: underline;
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: -10%;
+  display: none;
+  background: rgb(146, 110, 180);
+  padding: 10px;
+  z-index: 10;
+  border: solid black;
 }
 
+.dropdown ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+.dropdown ul li {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: solid rgb(89, 76, 95);
+}
 
+.dropdown ul li:hover {
+  text-decoration: underline;
+}
+.show {
+  display: block;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
