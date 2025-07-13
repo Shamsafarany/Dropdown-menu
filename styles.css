@@ -17,7 +17,7 @@ header{
     margin: auto
 }
 
-ul{
+.nav-list{
     list-style: none;
     display: flex;
     gap: 50px;
@@ -28,7 +28,7 @@ ul{
 .menu{
     border-bottom: solid white;
     padding: 10px;
-    border-radius: 20px;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -38,5 +38,40 @@ ul{
 img{
     height: 15px;
     width: 15px;
-    
 }
+.list-container{
+    position: relative;
+}
+
+
+
+.dropdown{
+    border: solid black;
+    position: absolute;
+    background-color: rgb(146, 110, 180);
+    padding: 10px;
+    width: 120%;
+    top: 100%;
+    left: -20%;
+    margin-top: 20px;
+
+}
+
+.dropdown ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+.dropdown ul li{
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: solid rgb(89, 76, 95);
+}
+
+.dropdown ul li:hover{
+    text-decoration: underline;
+}
+
+
