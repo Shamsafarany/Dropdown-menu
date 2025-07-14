@@ -11,3 +11,4 @@ for (let i = 0; i < headerItems.length; i++) {
     dropdown.classList.remove("show");
   });
 }
+
