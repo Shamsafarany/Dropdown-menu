@@ -1,14 +1,22 @@
 const headerItems = document.querySelectorAll(".list-container");
 
-for (let i = 0; i < headerItems.length; i++) {
-  const dropdown = headerItems[i].querySelector(".dropdown");
-
-  headerItems[i].addEventListener("mouseenter", function () {
-    dropdown.classList.add("show");
-  });
-
-  headerItems[i].addEventListener("mouseleave", function () {
-    dropdown.classList.remove("show");
+function setDropdown(headerItems) {
+  headerItems.forEach((item) => {
+    const dropdown = item.querySelector(".dropdown");
+    const dropdownItems = dropdown.querySelectorAll("li");
+    const mainItem = item.querySelector(".header-items");
+    item.addEventListener("mouseenter", () => {
+      dropdown.style.display = "block";
+    });
+    item.addEventListener("mouseleave", () => {
+      dropdown.style.display = "none";
+    });
+    dropdownItems.forEach((dropdownItem) => {
+      dropdownItem.addEventListener("click", () => {
+        mainItem.textContent = dropdownItem.textContent;
+      });
+    });
   });
 }
 
+setDropdown(headerItems);
